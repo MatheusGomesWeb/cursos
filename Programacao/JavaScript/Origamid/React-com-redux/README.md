@@ -17,6 +17,9 @@
   - [Redux Middleware](#redux-middleware)
   - [Redux Thunk](#redux-thunk)
   - [Middleware desafio](middleware/desafio)
+- [Provider](#provider)
+- [useSelect](#useSelector)
+- [Redux Toolkit](#redux-toolkit)
 
 ## Introducao ao redux
 
@@ -120,10 +123,21 @@ O metodo subscribe e unsubscribe, serve para 'observar' alterações no estado e
     const state = store.getState();
     console.log(state); // { contador: 0, modal: false }
 
-
-
-
-
-
 ## Middleware
 
+
+## Provider
+
+Para podermos ter acesso ao dispatch e a store dentro dos componentes de React, precisamos encapsular todo o aplicativo dentro do componente Provider que é disponibilizado pelo React-redux.
+
+## useSelector
+
+O hook  useSelector é utilizado para termos acesso ao estado do Redux em qualquer local da nossa aplicação.
+
+## Redux Toolkit
+
+A equipe do Redux identificou que boa parte do código criado para escrevermos o Redux, é sempre a mesma coisa. Para isso eles criaram um outro pacote (que eles aconselham a utilizar), onde boa parte da repetição, como a criação de constantes, action creator, configuração de devtools, immer, redux-thunk e outros já sçai feitos para você.
+
+O toolkit pode ser utilizado sem o React. Ao instalar o mesmo não é necessário instalar o redux, apenas o react-redux.
+
+> npm install @reduxjs/toolkit
